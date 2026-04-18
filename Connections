@@ -1,0 +1,26 @@
+1. Bluetooth Module (e.g., HC-05)
+VCC → 5V (Arduino)
+GND → GND
+TX → RX (Arduino)
+RX → TX (Arduino) (use voltage divider if needed)
+2. Relay Module (4-Channel)
+VCC → 5V (Arduino)
+GND → GND
+IN1 → Arduino pin 2
+IN2 → Arduino pin 3
+IN3 → Arduino pin 4
+IN4 → Arduino pin 5
+3. Motors via Relay
+Each motor uses 2 relays for direction control:
+Motor A:
+Relay 1 (IN1) → one terminal
+Relay 2 (IN2) → other terminal
+Motor B:
+Relay 3 (IN3) → one terminal
+Relay 4 (IN4) → other terminal
+External battery (+) → relay COM terminals
+Relay NO terminals → motor connections
+Battery (−) → motor common return
+4. Power
+Arduino → separate 5V supply (or regulated)
+Motors → external battery (do NOT power motors from Arduino)
